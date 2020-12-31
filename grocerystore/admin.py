@@ -3,6 +3,8 @@ from django.urls import reverse
 from django.utils.http import urlencode
 from django.utils.html import format_html
 
+from import_export.admin import ImportExportModelAdmin
+
 from .models import Store, Position, Staff, Supplier, ProductType, Product, Check, LoyaltyCard, Sale, Reviews
 
 class StoreAdmin(admin.ModelAdmin):
@@ -12,7 +14,7 @@ class PositionAdmin(admin.ModelAdmin):
 	list_display = ('id', 'name', 'description', 'isFull')
 	list_display_links = ('id', 'name', 'description', 'isFull')
 
-class StaffAdmin(admin.ModelAdmin):
+class StaffAdmin(ImportExportModelAdmin):
 	list_display = ('id', 'name', 'position', 'store', 'salary')
 	list_display_links =  ('id', 'name', 'position', 'store', 'salary')
 	search_fields = ['name', 'position', 'store']
