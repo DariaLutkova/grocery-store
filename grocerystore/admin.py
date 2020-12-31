@@ -1,4 +1,7 @@
 from django.contrib import admin
+from django.urls import reverse
+from django.utils.http import urlencode
+from django.utils.html import format_html
 
 from .models import Store, Position, Staff, Supplier, ProductType, Product, Check, LoyaltyCard, Sale, Reviews
 
@@ -24,8 +27,18 @@ class ProductTypeAdmin(admin.ModelAdmin):
 	list_display_links = ('id', 'name', 'description')
 
 class ProductAdmin(admin.ModelAdmin):
-	list_display = ('id', 'name', 'productType', 'supplier', 'store', 'sale', 'price', 'priceSale', 'count', 'date', 'isNew', 'image')
-	list_display_links = ('id', 'name', 'productType', 'supplier', 'store', 'sale', 'price', 'priceSale', 'count', 'date', 'isNew', 'image')
+	list_display = ('id', 'name', 'view_productType', 'supplier', 'store', 'sale', 'price', 'priceSale', 'count', 'date', 'isNew', 'image')
+	list_display_links = ('id', 'name', 'supplier', 'store', 'sale', 'price', 'priceSale', 'count', 'date', 'isNew', 'image')
+	list_filter = ('store', 'sale', 'isNew')
+	search_fields = ['name']
+
+	def view_productType(self, obj):
+		url = (
+			reverse("admin:grocerystore_product_changelist")
+			+ "?"
+			+ urlencode({"productType": f"{obj.productType.id}"})
+		)
+		return format_html('<a href="{}">{}</a>', url, obj.productType)
 
 class CheckAdmin(admin.ModelAdmin):
 	list_display = ('id', 'store', 'date', 'total_price', 'loyalty_card')

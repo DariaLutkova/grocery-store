@@ -50,9 +50,9 @@ class Product(models.Model):
 	productType = models.ForeignKey('ProductType', related_name='products', on_delete=models.CASCADE)
 	supplier = models.ForeignKey('Supplier', related_name='products', on_delete=models.CASCADE)
 	store = models.ForeignKey('Store', related_name='products', on_delete=models.CASCADE)
-	sale = models.ForeignKey('Sale', related_name='products', on_delete=models.CASCADE, blank=True)
+	sale = models.ForeignKey('Sale', related_name='products', on_delete=models.CASCADE, blank=True,)
 	price = models.FloatField()
-	priceSale = models.FloatField(blank=True)
+	priceSale = models.FloatField(blank=True,)
 	count = models.FloatField()
 	date = models.DateField(auto_now_add=True)
 	isNew = models.BooleanField()
@@ -71,7 +71,7 @@ class Check(models.Model):
 	cashier = models.ForeignKey('Staff', related_name='checks', on_delete=models.CASCADE, default = 0)
 
 	def __str__(self):
-		return self.id
+		return str(self.id)
 
 class LoyaltyCard(models.Model):
 	phone_number = models.IntegerField()
@@ -79,7 +79,7 @@ class LoyaltyCard(models.Model):
 	average_check = models.FloatField()
 
 	def __str__(self):
-		return self.phone_number
+		return str(self.phone_number)
 
 class Sale(models.Model):
 	name = models.CharField(max_length=150)
