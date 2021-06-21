@@ -113,3 +113,8 @@ media/
 # **/migrations/**
 # !**/migrations
 # !**/migrations/__init__.py
+
+frontend/node_modules
+
+frontend/webpack-stats.dev.json
+frontend/webpack-stats.prod.json
