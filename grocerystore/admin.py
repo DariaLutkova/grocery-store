@@ -47,8 +47,8 @@ class CheckAdmin(admin.ModelAdmin):
 	list_display_links = ('id', 'store', 'date', 'total_price', 'loyalty_card')
 
 class LoyaltyCardAdmin(admin.ModelAdmin):
-	list_display = ('id', 'phone_number', 'scores', 'average_check')
-	list_display_links = ('id', 'phone_number', 'scores', 'average_check')
+	list_display = ('id', 'email', 'scores', 'average_check')
+	list_display_links = ('id', 'email', 'scores', 'average_check')
 
 class SaleAdmin(admin.ModelAdmin):
 	list_display = ('id', 'name', 'description')
