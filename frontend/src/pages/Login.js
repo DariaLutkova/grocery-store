@@ -21,7 +21,32 @@ const tailLayout = {
 };
 
 export default function Login() {
+  function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+
   const onFinish = (values) => {
+    const csrftToken = getCookie('csrftoken');
+    fetch('api/auth/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrftToken,
+      },
+      body: JSON.stringify(values),
+    })
+      .then((response) => {
+        if (response.status > 400) {
+          console.log('error', response);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log('login', data.message);
+      });
     console.log('Success:', values);
   };
 

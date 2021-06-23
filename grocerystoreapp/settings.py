@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'grocerystore',
     'import_export',
     'webpack_loader',
+    "graphene_django",
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -54,6 +56,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
+]
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000"
+    # your React App domain
 ]
 
 ROOT_URLCONF = 'grocerystoreapp.urls'
@@ -153,3 +163,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # STATICFILES_DIRS = (
 #    os.path.join(BASE_DIR, 'static'),
 # )
+
+# GRAPHQL
+GRAPHENE = {
+    'SCHEMA': 'grocerystoreapp.schema.schema'
+}

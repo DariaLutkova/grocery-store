@@ -2,10 +2,8 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.models import User
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import User, Group
 from rest_framework import status
-from django.contrib.auth.models import Group
 
 from .models import Product
 from .models import LoyaltyCard
@@ -76,10 +74,17 @@ class AuthView(APIView):
           if loggedUser.groups.filter(name='customer').exists():
              return Response({
                 "role": "customer",
+                "firstName": loggedUser.first_name,
+                "lastName": loggedUser.last_name,
+                "email": loggedUser.email
               })
           else:
+            print(loggedUser.first_name, 'LOGGED USER')
             return Response({
                "role": "administrator",
+               "firstName": loggedUser.first_name,
+               "lastName": loggedUser.last_name,
+               "email": loggedUser.email
              })
         else:
           return Response({
