@@ -26,7 +26,7 @@ class Query(graphene.ObjectType):
     def resolve_products(self, info, **kwargs):
         return Product.objects.all()
 
-    def resolve_loyalty_cards(self, info, **kwargs):
+    def resolve_loyaltyCards(self, info, **kwargs):
         return LoyaltyCard.objects.all()
 
     def resolve_reviews(self, info, **kwargs):

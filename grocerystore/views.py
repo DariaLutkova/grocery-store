@@ -1,7 +1,7 @@
 from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User, Group
 from rest_framework import status
 
@@ -94,6 +94,20 @@ class AuthView(APIView):
         return Response({
         "error": "invalid login or password"
         })
+
+class UserView(APIView):
+  def get(self, request):
+      return Response({
+          "isAuth": request.user.is_authenticated,
+          "firstName": request.user.first_name,
+          "lastName": request.user.last_name,
+          "email": request.user.email
+        })
+
+class LogoutView(APIView):
+  def post(self, request):
+      logout(request)
+      return Response({"status":"success"})
 
 class RegistrationView(APIView):
   def post(self, request):

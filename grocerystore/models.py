@@ -75,6 +75,7 @@ class Check(models.Model):
 
 class LoyaltyCard(models.Model):
 	email = models.CharField(max_length=150, default = 'default name')
+	code = models.CharField(max_length=150, default = '000000000')
 	scores = models.IntegerField()
 	average_check = models.FloatField()
 
