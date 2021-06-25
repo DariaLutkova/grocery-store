@@ -13,46 +13,46 @@ from .serializers import LoyaltyCardSerializer
 from .serializers import ReviewSerializer
 
 class ProductView(APIView):
-	def get(self, request):
-		products = Product.objects.all()
-		serializer = ProductSerializer(products, many=True)
+  def get(self, request):
+    products = Product.objects.all()
+    serializer = ProductSerializer(products, many=True)
 
-		return Response({'products': serializer.data})
+    return Response({'products': serializer.data})
 
-	def post(self, request):
-		product = request.data.get("product")
+  def post(self, request):
+    product = request.data.get("product")
 
-		serializer = ProductSerializer(data = product)
-		if serializer.is_valid(raise_exception=True):
-			product_saved = serializer.save()
+    serializer = ProductSerializer(data = product)
+    if serializer.is_valid(raise_exception=True):
+      product_saved = serializer.save()
 
-		return Response({"success": "Product '{}' has been added".format(product_saved.name)})
+    return Response({"success": "Product '{}' has been added".format(product_saved.name)})
 
-	def delete(self, request, pk):
-		product = get_object_or_404(Product.objects.all(), pk=pk)
-		product.delete()
-		return Response({
-			"message": "Product with id '{}' has been deleted".format(pk)
-			}, status=204)
+  def delete(self, request, pk):
+    product = get_object_or_404(Product.objects.all(), pk=pk)
+    product.delete()
+    return Response({
+      "message": "Product with id '{}' has been deleted".format(pk)
+      }, status=204)
 
-	def put(self, request, pk):
-		product_saved = get_object_or_404(Product.objects.all(), pk=pk)
-		data = request.data.get("product")
-		serializer = ProductSerializer(instance=product_saved, data=data, partial=True)
+  def put(self, request, pk):
+    product_saved = get_object_or_404(Product.objects.all(), pk=pk)
+    data = request.data.get("product")
+    serializer = ProductSerializer(instance=product_saved, data=data, partial=True)
 
-		if serializer.is_valid(raise_exception=True):
-			product_saved = serializer.save()
+    if serializer.is_valid(raise_exception=True):
+      product_saved = serializer.save()
 
-		return Response({
-			"success": "Product '{}' has been updated".format(product_saved.name)
-		})
+    return Response({
+      "success": "Product '{}' has been updated".format(product_saved.name)
+    })
 
 class LoyaltyCardView(APIView):
-	def get(self, request):
-		loyaltyCards = LoyaltyCard.objects.all()
-		serializer = LoyaltyCardSerializer(loyaltyCards, many=True)
+  def get(self, request):
+    loyaltyCards = LoyaltyCard.objects.all()
+    serializer = LoyaltyCardSerializer(loyaltyCards, many=True)
 
-		return Response({'cards': serializer.data})
+    return Response({'cards': serializer.data})
 
 class ReviewView(APIView):
     def get(self, request):
@@ -78,6 +78,13 @@ class AuthView(APIView):
                 "lastName": loggedUser.last_name,
                 "email": loggedUser.email
               })
+          elif loggedUser.groups.filter(name='operator').exists():
+             return Response({
+                  "firstName": loggedUser.first_name,
+                  "lastName": loggedUser.last_name,
+                  "email": loggedUser.email,
+                  "role": "operator",
+                })
           else:
             print(loggedUser.first_name, 'LOGGED USER')
             return Response({
@@ -97,11 +104,29 @@ class AuthView(APIView):
 
 class UserView(APIView):
   def get(self, request):
+   if request.user.groups.filter(name='customer').exists():
+       return Response({
+         "isAuth": request.user.is_authenticated,
+         "firstName": request.user.first_name,
+         "lastName": request.user.last_name,
+         "email": request.user.email,
+         "role": "customer",
+       })
+   elif request.user.groups.filter(name='operator').exists():
+     return Response({
+       "isAuth": request.user.is_authenticated,
+       "firstName": request.user.first_name,
+       "lastName": request.user.last_name,
+       "email": request.user.email,
+       "role": "operator",
+     })
+   else:
       return Response({
           "isAuth": request.user.is_authenticated,
           "firstName": request.user.first_name,
           "lastName": request.user.last_name,
-          "email": request.user.email
+          "email": request.user.email,
+          "role": "administrator",
         })
 
 class LogoutView(APIView):
@@ -124,5 +149,9 @@ class RegistrationView(APIView):
     group = Group.objects.get(name='customer')
     group.user_set.add(user)
 
-    return Response({"status":"success","response":"User Successfully Created"}, status=status.HTTP_201_CREATED)
+    return Response({
+        "status":"success",
+        "response":"User Successfully Created",
+        "role": "customer"
+    }, status=status.HTTP_201_CREATED)
 
