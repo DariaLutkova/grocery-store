@@ -74,12 +74,13 @@ class Check(models.Model):
 		return str(self.id)
 
 class LoyaltyCard(models.Model):
-	phone_number = models.IntegerField()
+	email = models.CharField(max_length=150, default = 'default name')
+	code = models.CharField(max_length=150, default = '000000000')
 	scores = models.IntegerField()
 	average_check = models.FloatField()
 
 	def __str__(self):
-		return str(self.phone_number)
+		return str(self.email)
 
 class Sale(models.Model):
 	name = models.CharField(max_length=150)

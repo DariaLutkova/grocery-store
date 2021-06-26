@@ -1,0 +1,15 @@
+.layout {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 25px 50px;
+  height: 100%;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}

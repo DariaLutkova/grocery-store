@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'grocerystore',
     'import_export',
+    'webpack_loader',
+    "graphene_django",
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -53,6 +56,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
+]
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000"
+    # your React App domain
 ]
 
 ROOT_URLCONF = 'grocerystoreapp.urls'
@@ -60,7 +71,7 @@ ROOT_URLCONF = 'grocerystoreapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates"),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,6 +83,25 @@ TEMPLATES = [
         },
     },
 ]
+
+# DEVELOPMENT
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+            'BUNDLE_DIR_NAME': 'bundles/',
+            'STATS_FILE': os.path.join(BASE_DIR,'frontend/webpack-stats.dev.json'),
+        },
+}
+
+# PRODUCTION
+
+# WEBPACK_LOADER = {
+#    'DEFAULT': {
+#            'BUNDLE_DIR_NAME': 'static/bundles/',
+#            'STATS_FILE': os.path.join(BASE_DIR,'frontend/webpack-stats.prod.json'),
+#        },
+#}
+
 
 WSGI_APPLICATION = 'grocerystoreapp.wsgi.application'
 
@@ -119,9 +149,22 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+# DEVELOPMENT
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# PRODUCTION
+
+# STATIC_ROOT = ''
+# STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'static'),
+# )
+
+# GRAPHQL
+GRAPHENE = {
+    'SCHEMA': 'grocerystoreapp.schema.schema'
+}

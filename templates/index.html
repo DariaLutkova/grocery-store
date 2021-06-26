@@ -1,0 +1,16 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Луткова Дарья 181-321</title>
+  {% render_bundle 'main' 'css' %}
+</head>
+<body>
+<div id="root">
+</div>
+<form>{% csrf_token %}</form>
+{% render_bundle 'main' 'js' %}
+</body>
+</html>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80377ad1-f3bb-4649-95df-a746a7621945" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocerystore/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/grocerystore/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocerystoreapp/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/grocerystoreapp/schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocerystoreapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/grocerystoreapp/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1uGfWfXseQ9Ikbeoz288iFGSTEQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80377ad1-f3bb-4649-95df-a746a7621945" name="Default Changelist" comment="" />
+      <created>1624296891334</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624296891334</updated>
+      <workItem from="1624296896755" duration="6674000" />
+      <workItem from="1624332559301" duration="2138000" />
+      <workItem from="1624381039384" duration="3847000" />
+      <workItem from="1624472719417" duration="6258000" />
+      <workItem from="1624557531225" duration="63000" />
+      <workItem from="1624558020129" duration="4868000" />
+      <workItem from="1624646478738" duration="3097000" />
+      <workItem from="1624649885471" duration="1842000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add frontend monorepo">
+      <created>1624303884974</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624303884974</updated>
+    </task>
+    <task id="LOCAL-00002" summary="API Integration">
+      <created>1624388992009</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624388992009</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add graphQL">
+      <created>1624476548816</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624476548816</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add User Auth Check and Logout">
+      <created>1624563846386</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624563846386</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add frontend monorepo" />
+    <MESSAGE value="API Integration" />
+    <MESSAGE value="Add graphQL" />
+    <MESSAGE value="Add User Auth Check and Logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add User Auth Check and Logout" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1624251002059">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1624251002059" />
+    <state width="1345" height="289" key="GridCell.Tab.0.bottom" timestamp="1624388940353">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="289" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624388940353" />
+    <state width="1345" height="289" key="GridCell.Tab.0.center" timestamp="1624388940353">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="289" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624388940353" />
+    <state width="1345" height="289" key="GridCell.Tab.0.left" timestamp="1624388940353">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="289" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624388940353" />
+    <state width="1345" height="289" key="GridCell.Tab.0.right" timestamp="1624388940353">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="289" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624388940353" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1624647568979">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1624647568979" />
+    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1624302367785">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1624302367785" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1624387880755">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1624387880755" />
+  </component>
+</project>
