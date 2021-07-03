@@ -86,21 +86,21 @@ TEMPLATES = [
 
 # DEVELOPMENT
 
-WEBPACK_LOADER = {
-    'DEFAULT': {
-            'BUNDLE_DIR_NAME': 'bundles/',
-            'STATS_FILE': os.path.join(BASE_DIR,'frontend/webpack-stats.dev.json'),
-        },
-}
+#WEBPACK_LOADER = {
+#    'DEFAULT': {
+#            'BUNDLE_DIR_NAME': 'bundles/',
+#            'STATS_FILE': os.path.join(BASE_DIR,'frontend/webpack-stats.dev.json'),
+#        },
+#}
 
 # PRODUCTION
 
-# WEBPACK_LOADER = {
-#    'DEFAULT': {
-#            'BUNDLE_DIR_NAME': 'static/bundles/',
-#            'STATS_FILE': os.path.join(BASE_DIR,'frontend/webpack-stats.prod.json'),
-#        },
-#}
+WEBPACK_LOADER = {
+    'DEFAULT': {
+            'BUNDLE_DIR_NAME': 'static/bundles/',
+            'STATS_FILE': os.path.join(BASE_DIR,'frontend/webpack-stats.prod.json'),
+        },
+}
 
 
 WSGI_APPLICATION = 'grocerystoreapp.wsgi.application'
@@ -154,15 +154,16 @@ USE_TZ = True
 
 # DEVELOPMENT
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # PRODUCTION
 
-# STATIC_ROOT = ''
-# STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, 'static'),
-# )
+STATIC_URL = '/static/'
+STATIC_ROOT = ''
+STATICFILES_DIRS = (
+   os.path.join(BASE_DIR, 'static'),
+)
 
 # GRAPHQL
 GRAPHENE = {

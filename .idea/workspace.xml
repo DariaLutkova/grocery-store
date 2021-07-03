@@ -21,9 +21,34 @@
   <component name="ChangeListManager">
     <list default="true" id="80377ad1-f3bb-4649-95df-a746a7621945" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocerystore/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/grocerystore/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocerystoreapp/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/grocerystoreapp/schema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grocerystoreapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/grocerystoreapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/config-overrides.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Profile.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grocerystoreapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/grocerystoreapp/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +75,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/bundles" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\darya\Documents\projects\django-grocery-store\static\bundles" />
+      <recent name="C:\Users\darya\Documents\projects\django-grocery-store\frontend" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -97,7 +129,8 @@
       <workItem from="1624557531225" duration="63000" />
       <workItem from="1624558020129" duration="4868000" />
       <workItem from="1624646478738" duration="3097000" />
-      <workItem from="1624649885471" duration="1842000" />
+      <workItem from="1624649885471" duration="2046000" />
+      <workItem from="1624710998747" duration="1079000" />
     </task>
     <task id="LOCAL-00001" summary="Add frontend monorepo">
       <created>1624303884974</created>
@@ -127,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624563846386</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add Operator Role">
+      <created>1624653726181</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624653726181</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +190,8 @@
     <MESSAGE value="API Integration" />
     <MESSAGE value="Add graphQL" />
     <MESSAGE value="Add User Auth Check and Logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add User Auth Check and Logout" />
+    <MESSAGE value="Add Operator Role" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Operator Role" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1624251002059">
